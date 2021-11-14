@@ -6,14 +6,14 @@ export const Product = ({ product }) => {
   const dispatch = useDispatch()
 
   return (
-    <article className='product'>
-      <span className='emoji' role='img' aria-label={product.title}>
+    <article className="product">
+      <span className="emoji" role="img" aria-label={product.title}>
         {product.emoji}
       </span>
       <p>{product.price}:-</p>
 
       <button
-        type='button'
+        type="button"
         disabled={product.inventory === 0}
         onClick={() => dispatch(cart.actions.addItem(product))}>
         Add to cart

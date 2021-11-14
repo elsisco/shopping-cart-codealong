@@ -7,23 +7,19 @@ export const CartItem = ({ product }) => {
 
   return (
     <li>
-      <span className='emoji' role='img' aria-label={product.title}>
+      <span className="emoji" role="img" aria-label={product.title}>
         {product.emoji}
       </span>
-      <div className='info'>
-        <span className='quantity'>x{product.quantity}</span>
-        <span className='sum'>{product.price * product.quantity}:-</span>
+      <div className="info">
+        <span className="quantity">x{product.quantity}</span>
+        <span className="sum">{product.price * product.quantity}:-</span>
       </div>
 
-      <span className='actions'>
-        <button
-          type='button'
-          onClick={() => dispatch(cart.actions.removeItem(product))}>
+      <span className="actions">
+        <button type="button" onClick={() => dispatch(cart.actions.removeItem(product))}>
           -
         </button>
-        <button
-          type='button'
-          onClick={() => dispatch(cart.actions.addItem(product))}>
+        <button type="button" onClick={() => dispatch(cart.actions.addItem(product))}>
           +
         </button>
       </span>

@@ -9,7 +9,7 @@ import { products } from 'reducers/products'
 
 const reducer = combineReducers({
   cart: cart.reducer,
-  products: products.reducer,
+  products: products.reducer
 })
 
 const store = configureStore({ reducer })
